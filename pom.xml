@@ -1,16 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>pers.liuweiwei.bbs</groupId>
-  <artifactId>BBS-parent</artifactId>
-  <version>1.0.0</version>
-  <modules>
-    <module>bbs-common</module>
-  </modules>
-  <packaging>pom</packaging>
+    <!--Spring Boot项目-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.18.RELEASE</version>
+    </parent>
 
-  <name>BBS-parent</name>
+    <groupId>pers.liuweiwei.bbs</groupId>
+    <artifactId>BBS-parent</artifactId>
+    <version>1.0.0</version>
+    <modules>
+        <module>bbs-common</module>
+        <module>bbs-user-api</module>
+        <module>bbs-user-server</module>
+        <module>bbs-post-api</module>
+        <module>bbs-post-server</module>
+        <module>bbs-messagecenter-api</module>
+        <module>bbs-messagecenter-server</module>
+        <module>bbs-mgrsite</module>
+        <module>bbs-website</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <name>BBS-parent</name>
+
+    <dependencies>
+        <!--红辣椒-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!--阿里巴巴fastjson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.7</version>
+        </dependency>
+    </dependencies>
+
+    <!--版本管理-->
+    <dependencyManagement>
+        <dependencies>
+            <!--引入公共的项目依赖-->
+            <dependency>
+                <groupId>pers.liuweiwei.bbs</groupId>
+                <artifactId>bbs-common</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <!--用户服务api-->
+            <dependency>
+                <groupId>pers.liuweiwei.bbs</groupId>
+                <artifactId>bbs-user-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <!-- Spring Boot Dubbo 依赖 -->
+            <dependency>
+                <groupId>com.gitee.reger</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>1.0.10</version>
+            </dependency>
+            <!--阿里巴巴的druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.0.25</version>
+            </dependency>
+            <!--spring-boot的mybatis依赖-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.2.0</version>
+            </dependency>
+            <!--上传文件工具类-->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.4</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>

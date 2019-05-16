@@ -2,7 +2,7 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!--commom依赖下不导入公用依赖，只存储公共使用类-->
+    <!--提供服务所需要的公共的实体和接口-->
     <parent>
         <artifactId>BBS-parent</artifactId>
         <groupId>pers.liuweiwei.bbs</groupId>
@@ -10,8 +10,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bbs-common</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>bbs-user-api</artifactId>
 
-    <name>bbs-common</name>
+    <name>bbs-user-api</name>
+
+    <dependencies>
+        <!--引入公共的项目依赖-->
+        <dependency>
+            <groupId>pers.liuweiwei.bbs</groupId>
+            <artifactId>bbs-common</artifactId>
+        </dependency>
+    </dependencies>
 </project>
