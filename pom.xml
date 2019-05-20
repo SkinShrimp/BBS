@@ -11,23 +11,23 @@
         <version>1.5.18.RELEASE</version>
     </parent>
 
-    <groupId>pers.liuweiwei.bbs</groupId>
-    <artifactId>BBS-parent</artifactId>
+    <groupId>team.learn.darkfriends</groupId>
+    <artifactId>darkfriends-parent</artifactId>
     <version>1.0.0</version>
     <modules>
-        <module>bbs-common</module>
-        <module>bbs-user-api</module>
-        <module>bbs-user-server</module>
-        <module>bbs-post-api</module>
-        <module>bbs-post-server</module>
-        <module>bbs-messagecenter-api</module>
-        <module>bbs-messagecenter-server</module>
-        <module>bbs-mgrsite</module>
-        <module>bbs-website</module>
+        <module>darkfriends-common</module>
+        <module>darkfriends-user-api</module>
+        <module>darkfriends-user-server</module>
+        <module>darkfriends-post-api</module>
+        <module>darkfriends-post-server</module>
+        <module>darkfriends-messagecenter-api</module>
+        <module>darkfriends-messagecenter-server</module>
+        <module>darkfriends-mgrsite</module>
+        <module>darkfriends-website</module>
     </modules>
     <packaging>pom</packaging>
 
-    <name>BBS-parent</name>
+    <name>darkfriends-parent</name>
 
     <dependencies>
         <!--红辣椒-->
@@ -49,14 +49,14 @@
         <dependencies>
             <!--引入公共的项目依赖-->
             <dependency>
-                <groupId>pers.liuweiwei.bbs</groupId>
-                <artifactId>bbs-common</artifactId>
+                <groupId>team.learn.darkfriends</groupId>
+                <artifactId>darkfriends-common</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <!--用户服务api-->
             <dependency>
-                <groupId>pers.liuweiwei.bbs</groupId>
-                <artifactId>bbs-user-api</artifactId>
+                <groupId>team.learn.darkfriends</groupId>
+                <artifactId>darkfriends-user-api</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <!-- Spring Boot Dubbo 依赖 -->

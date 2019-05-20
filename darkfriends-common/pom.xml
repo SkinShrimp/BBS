@@ -2,14 +2,16 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--commom依赖下不导入公用依赖，只存储公共使用类-->
     <parent>
-        <artifactId>BBS-parent</artifactId>
-        <groupId>pers.liuweiwei.bbs</groupId>
+        <artifactId>darkfriends-parent</artifactId>
+        <groupId>team.learn.darkfriends</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bbs-messagecenter-api</artifactId>
+    <artifactId>darkfriends-common</artifactId>
+    <packaging>jar</packaging>
 
-    <name>bbs-messagecenter-api</name>
+    <name>darkfriends-common</name>
 </project>
